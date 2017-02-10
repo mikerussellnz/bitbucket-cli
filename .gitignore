@@ -1,0 +1,5 @@
+/BitBucketCLI/bin/Debug
+/BitBucketCLI/obj/Debug
+/packages
+/.vs/BitBucketCLI/v14/*.suo
+/BitBucketCLI/*.user
