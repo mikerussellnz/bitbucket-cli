@@ -20,27 +20,27 @@ This project depends on the Atlassian.Stash.Api Nuget package.  Ensure the packa
 ## Usage Examples
 
 #### Create pull requset
-BitbucketCLI pullrequest create --repository=PROJ/repo --from=feature/make_it_cool --to=develop --title="Added cool new features." --description="Added feature X and feature Y." --reviewer=james@tester.com  
+`BitbucketCLI pullrequest create --repository=PROJ/repo --from=feature/make_it_cool --to=develop --title="Added cool new features." --description="Added feature X and feature Y." --reviewer=james@tester.com`
 
 #### List pull requsets
-BitbucketCLI pullrequest list --repository=PROJ/repo --repository=PROJ/repo2  
-BitbucketCLI pullrequest list --repository=PROJ/repo --user=mike@tester.com --state=merged  
+`BitbucketCLI pullrequest list --repository=PROJ/repo --repository=PROJ/repo2`
+`BitbucketCLI pullrequest list --repository=PROJ/repo --user=mike@tester.com --state=merged` 
 
 #### Create branch
-BitbucketCLI branch create --repository=PROJ/repo --from=ddb3629bfe5f7f9ae76c314a3da1b255a8f45dd3 --name=feature/make_it_cool 
+`BitbucketCLI branch create --repository=PROJ/repo --from=ddb3629bfe5f7f9ae76c314a3da1b255a8f45dd3 --name=feature/make_it_cool`
 
 #### List branches
-BitbucketCLI branch list --repository=PROJ/repo  
-BitbucketCLI branch list --repository=PROJ/repo --filter=feature/  
+`BitbucketCLI branch list --repository=PROJ/repo`  
+`BitbucketCLI branch list --repository=PROJ/repo --filter=feature/`  
 
 #### List projects
-BitbucketCLI project list  
+`BitbucketCLI project list`  
 
 #### List repositories
-BitbucketCLI repository list --project=PROJ  
+`BitbucketCLI repository list --project=PROJ`  
 
 #### List files in repository
-BitbucketCLI repository listfiles --repository=PROJ/repo  
+`BitbucketCLI repository listfiles --repository=PROJ/repo`  
 
 #### Get file contents
-BitbucketCLI repository getfile --repository=PROJ/repo --file=path/to/file
+`BitbucketCLI repository getfile --repository=PROJ/repo --file=path/to/file`
