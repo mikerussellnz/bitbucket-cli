@@ -24,6 +24,8 @@ This project depends on the Atlassian.Stash.Api Nuget package.  Ensure the packa
 
 #### List pull requsets
 `BitbucketCLI pullrequest list --repository=PROJ/repo --repository=PROJ/repo2`
+
+#### List only merged pull requests
 `BitbucketCLI pullrequest list --repository=PROJ/repo --user=mike@tester.com --state=merged` 
 
 #### Create branch
@@ -31,6 +33,8 @@ This project depends on the Atlassian.Stash.Api Nuget package.  Ensure the packa
 
 #### List branches
 `BitbucketCLI branch list --repository=PROJ/repo`  
+
+#### Filter the list branches
 `BitbucketCLI branch list --repository=PROJ/repo --filter=feature/`  
 
 #### List projects
