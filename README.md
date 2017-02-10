@@ -1,5 +1,5 @@
 # bitbucket-cli
-Command line client to connect to Atlassian Bitbucket and perform.  Allows scripting of Bitbucket operations by shell scripts or for people who just perfer to use the command line. 
+Command line client to connect to Atlassian Bitbucket and perform actions.  Allows scripting of Bitbucket operations by shell scripts or for people who just perfer to use the command line. 
 
 ## Todo
 
