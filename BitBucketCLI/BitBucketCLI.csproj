@@ -69,9 +69,9 @@
     <Compile Include="ConsoleExtended.cs" />
     <Compile Include="DateTimeUtils.cs" />
     <Compile Include="CLIModule.cs" />
+    <Compile Include="Mono.Options-PCL.cs" />
     <Compile Include="Projects\ProjectList.cs" />
     <Compile Include="Projects\ProjectModule.cs" />
-    <Compile Include="Options.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PullRequests\PullRequestCreate.cs" />
