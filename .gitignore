@@ -3,3 +3,5 @@
 /packages
 /.vs/BitBucketCLI/v14/*.suo
 /BitBucketCLI/*.user
+BitBucketCLI/obj/
+BitBucketCLI/bin/
