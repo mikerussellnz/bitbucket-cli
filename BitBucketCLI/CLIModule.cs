@@ -7,7 +7,7 @@ namespace BitBucketCLI {
         protected abstract Dictionary<string, CLIItem> GetItems();
 
         protected string GetName() {
-            string typename = GetType().Name;
+            var typename = GetType().Name;
             return typename;
         }
 
@@ -17,7 +17,7 @@ namespace BitBucketCLI {
                 return 0;
             }
 
-            bool help = false;
+            var help = false;
             OptionSet options = new OptionSet() {
                 { "h|?|help", "display usage", v => help = v != null }
             };
@@ -31,8 +31,8 @@ namespace BitBucketCLI {
                 Console.WriteLine("Try `{0} --help' for more information.", Utils.GetExecutableName());
                 return -1;
             }
-            string requestedItem = args[0];
-            string[] parameters = new string[args.Length - 1];
+            var requestedItem = args[0];
+            var parameters = new string[args.Length - 1];
             Array.Copy(args, 1, parameters, 0, args.Length - 1);
 
             var items = GetItems();
@@ -48,7 +48,7 @@ namespace BitBucketCLI {
                 return -1;
             }
 
-            int result = item.RunWithArgs(parameters);
+            var result = item.RunWithArgs(parameters);
             return result;
         }
 

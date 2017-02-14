@@ -46,7 +46,7 @@ namespace BitBucketCLI.Branches {
         }
 
         private static IEnumerable<Branch> ListBranches(string repository, string filter = null) {
-            StashClient bitbucket = Program.ConnectToBitBucket();
+            var bitbucket = Program.ConnectToBitBucket();
             string project;
             string repo;
             Utils.SplitRepositoryReference(repository, out project, out repo);

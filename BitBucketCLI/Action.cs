@@ -7,7 +7,7 @@ namespace BitBucketCLI {
         public abstract OptionSet CreateOptions();
 
         public virtual int RunWithArgs(string[] args) {
-            OptionSet options = CreateOptions();
+            var options = CreateOptions();
 
             bool help = false;
             options.Add("h|?|help", "display usage", v => help = v != null);

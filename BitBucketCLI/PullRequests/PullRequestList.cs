@@ -34,9 +34,9 @@ namespace BitBucketCLI.PullRequests {
         }
 
         private static Dictionary<string, List<PullRequest>> GetPullRequests(List<string> repositories, PullRequestState state = PullRequestState.OPEN, string filterToUser = null) {
-            StashClient bitbucket = Program.ConnectToBitBucket();
+            var bitbucket = Program.ConnectToBitBucket();
 
-            Dictionary<string, Task<ResponseWrapper<PullRequest>>> tasksToWaitFor = repositories
+            var tasksToWaitFor = repositories
                 .ToDictionary(r => r, r => {
                     string project;
                     string repo;
@@ -56,7 +56,7 @@ namespace BitBucketCLI.PullRequests {
         }
 
         private void WritePullRequests(Dictionary<string, List<PullRequest>> pullRequests) {
-            ConsoleExtended console = new ConsoleExtended();
+            var console = new ConsoleExtended();
 
             bool firstRepo = true;
             foreach (var kvp in pullRequests) {
@@ -92,7 +92,7 @@ namespace BitBucketCLI.PullRequests {
                     (reviewer.User?.DisplayName ?? "None"),
                     (reviewer.User?.EmailAddress ?? "None"));
 
-                ConsoleColor statusColor = ConsoleColor.Gray;
+                var statusColor = ConsoleColor.Gray;
                 switch (reviewer.Status) {
                     case "APPROVED":
                         statusColor = ConsoleColor.Green;

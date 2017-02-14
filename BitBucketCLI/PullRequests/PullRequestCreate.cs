@@ -46,7 +46,7 @@ namespace BitBucketCLI.PullRequests {
         }
 
         private static PullRequest CreatePullRequest(string repository, string from, string to, string title, string description, List<string> reviewers) {
-            StashClient bitbucket = Program.ConnectToBitBucket();
+            var bitbucket = Program.ConnectToBitBucket();
 
             Console.WriteLine("Creating pull request in: " + repository);
             Console.WriteLine("From: " + from);
@@ -71,7 +71,7 @@ namespace BitBucketCLI.PullRequests {
                 }
             };
 
-            Task<PullRequest> task = bitbucket.PullRequests.Create(project, repo, new PullRequest() {
+            var task = bitbucket.PullRequests.Create(project, repo, new PullRequest() {
                 Title = title,
                 Description = description,
                 State = PullRequestState.OPEN,

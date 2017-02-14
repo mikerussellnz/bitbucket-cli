@@ -32,11 +32,11 @@ namespace BitBucketCLI.Branches {
         }
 
         private static Branch CreateBranch(string repository, string name, string from) {
-            StashClient bitbucket = Program.ConnectToBitBucket();
+            var bitbucket = Program.ConnectToBitBucket();
             string project;
             string repo;
             Utils.SplitRepositoryReference(repository, out project, out repo);
-            Task<Branch> task = bitbucket.Branches.Create(project, repo, new Branch() {
+            var task = bitbucket.Branches.Create(project, repo, new Branch() {
                 Name = name,
                 StartPoint = from
             });
